@@ -21,12 +21,16 @@
     <div class="led"></div>
     <div class="led"></div>
     <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
     <div>
         <button  onmousedown="pulse()" onmouseup="pulse_release()">Pulse</button>
+        <input type="range" min="0" max="1" step="0.01" oninput="pulse_val(this.value)" onchange="pulse_val(this.value)"  />
     </div>
 
 <script>
-    var flow_rate = 100;
+    var flow_rate = 80;
     var default_colour = "red";
     var x = document.getElementsByClassName("led");
     x[0].style.backgroundColor = "blue";
@@ -47,6 +51,11 @@
         for(var i = x.length-1; i > 0; i--){
             x[i].style.backgroundColor = x[i-1].style.backgroundColor;
         }
+    }
+
+    function pulse_val(val){
+
+        x[0].style.backgroundColor = 'rgb(' +[parseInt(val*255),0,0].join(',') + ')';
     }
 
     window.setInterval(pulse_flow, flow_rate);
