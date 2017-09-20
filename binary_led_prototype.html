@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+    .led{
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        margin: 10px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div class="led"></div>
+    <div>
+        <button  onmousedown="pulse()" onmouseup="pulse_release()">Pulse</button>
+    </div>
+
+<script>
+    var flow_rate = 100;
+    var default_colour = "red";
+    var x = document.getElementsByClassName("led");
+    x[0].style.backgroundColor = "blue";
+
+    var current_led = 0;
+
+    function pulse(){
+        console.log("pulse");
+        x[0].style.backgroundColor = "red"
+    }
+
+    function pulse_release(){
+        console.log("pulse");
+        x[0].style.backgroundColor = "blue"
+    }
+
+    function pulse_flow(){
+        for(var i = x.length-1; i > 0; i--){
+            x[i].style.backgroundColor = x[i-1].style.backgroundColor;
+        }
+    }
+
+    window.setInterval(pulse_flow, flow_rate);
+
+
+</script>
+
+</body>
+
+
+</html>
