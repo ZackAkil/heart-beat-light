@@ -7,3 +7,5 @@ Represent blood pulses with a RGB LED strip.
 
 ## Future work
 Utilise HRS in pebble watch and send hear rate to arduino via bluetooth from android.
+Need to check how easy it is to collect from pebble :/
+https://developer.pebble.com/guides/events-and-services/hrm/
