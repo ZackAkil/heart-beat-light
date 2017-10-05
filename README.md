@@ -11,3 +11,7 @@ Utilise HRS in pebble watch and send hear rate to arduino via bluetooth from and
 Need to check how easy it is to collect from pebble :/
 
 https://developer.pebble.com/guides/events-and-services/hrm/
+
+https://forums.pebble.com/t/android-heart-rate-monitor/6885/23
+
+https://developer.pebble.com/guides/communication/using-pebblekit-android/
